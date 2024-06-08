@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <title>Image Slider</title>
     <style>
-        #slider {
+        #slider { 
+            
             width: 500px;
             height: 300px;
             overflow: hidden;
             position: relative;
+            display: flex;
+            justify-content: center;
         }
         #slider img {
             width: 100%;
@@ -16,9 +19,17 @@
             position: absolute;
             transition: opacity 1s;
             opacity: 0;
+            align-items: center;
         }
         #slider img.active {
             opacity: 1;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
     </style>
 </head>
@@ -39,7 +50,7 @@
             images[currentIndex].classList.add('active');
         }
 
-        setInterval(showNextImage, 3000);
+        setInterval(showNextImage, 2200);
     </script>
 </body>
 </html>
